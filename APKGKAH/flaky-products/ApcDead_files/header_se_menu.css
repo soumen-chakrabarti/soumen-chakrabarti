@@ -1,0 +1,74 @@
+table.header_se_menu {
+	width: 100%;
+	margin: 5px 0 0 0;
+	padding: 0;
+	border: 0;
+	clear: both;
+	border-collapse: collapse;
+	border-bottom: 2px solid #4fa600;
+}
+
+table.header_se_menu a {
+	text-decoration: none;
+	color: #636469;
+	outline: none;
+	display: block;
+	width: 100%;
+}
+
+table.header_se_menu td {
+  padding: 0 0 0 5px;
+}
+table.header_se_menu td.first {
+  padding: 0;
+}
+table.header_se_menu td div {
+  position: relative;
+}
+
+table.header_se_menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  width: 100%;
+  position: absolute;
+  background-color: #87D300;
+  z-index: 9999;
+}
+
+table.header_se_menu ul li {
+  margin: 7px;
+  padding: 7px 0 0 0;
+  border-top: 1px solid white;
+}
+
+table.header_se_menu td div.heading {
+  margin: 0;
+  padding: 5px;
+  color: #626469;
+  font-weight: bold;
+  background-color: #EAEAEA;
+}
+
+table.header_se_menu .heading, table.header_se_menu li {
+  margin: 0 10px;
+}
+
+/* Hover states */
+
+table.header_se_menu td.hovered div.heading {
+  color: white;
+  margin-top: -10px;
+  padding-bottom: 15px;
+  background-color: #87D300;
+}
+table.header_se_menu td.hovered ul {
+  display: block;
+}
+table.header_se_menu td.hovered a {
+	color: white;
+}
+table.header_se_menu td.hovered li a:hover {
+	color: #626469;
+}

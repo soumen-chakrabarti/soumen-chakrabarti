@@ -1,0 +1,7 @@
+#primary-nav, #header-country, #utility-nav, #footer a {
+	display: none;
+}
+	
+#footer div a {
+	display: inline;
+}

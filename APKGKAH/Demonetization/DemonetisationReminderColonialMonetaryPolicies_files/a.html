@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="no-js" lang=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Orcsnet: Support content online</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="a_data/css_002.css" rel="stylesheet">
+    <link href="a_data/css_004.css" rel="stylesheet">
+    <link href="a_data/css.css" rel="stylesheet">
+    <link href="a_data/css_003.css" rel="stylesheet">
+    <link rel="stylesheet" href="a_data/9c91cb88.css">
+    <!-- for exception logging only -->
+    <script src="a_data/connector.js" data-channel="orcsnet-plugin" id="consolerescript"></script>
+  </head>
+  <body>
+
+    <div id="orcsnet" style="height: 100%"><div style=" padding: 10px; font-family: Roboto, sans-serif;">
+  <div style="width: 700px; max-width: 100%; margin: 0px auto; border: 1px solid gray; border-radius: 3px;">
+    <div style="display: flex; justify-content: flex-start; align-items: center; width: 100%;">
+      <!-- logo -->
+      <div style="display: flex; align-items: center; justify-content: center; background-color: #ba2a2d; min-width: 140px; min-height: 140px;" class="grow-height">
+        <img src="a_data/the-wire-362x362.png" style="width: 120px;">
+      </div>
+
+      <!-- main -->
+      <div style="width: calc(100% - 40px); margin-left: 20px; margin-right: 10px; margin-top: 0px; min-height: 140px;" class="lt grow-height">
+
+        <!-- text cta -->
+        <div style="display:flex; justify-content: space-between; margin-top: 10px;">
+          <div style="font-size: 16px; ">
+            Support The Wire
+          </div>          
+        </div>
+        
+        <!-- hr -->
+        <div style="border-top: 1px solid lightgray; margin-top: 10px; margin-bottom: 15px;"></div>
+
+        <!-- buttons -->
+        <div style="display: flex; justify-content: space-around; align-items: center; width: 100%; ">
+          
+          <!-- button 1 -->
+          <div class="c_ctrl" data-ctrl="select-amt" style="padding: 5px;text-align: center;font-size: 18px;cursor: pointer;border-style: solid; border-radius: 3px;max-width: 150px;margin-left: 10px; margin-right: 10px;width: 20%;display: flex;flex-direction: column;justify-content: center;align-items: center;color: white; border-width: 1px; background-color: #ba2a2d; border-color: #ba2a2d;" data-amt="20">
+            <div>₹20</div>
+          </div>
+          
+          <!-- button 1 -->
+          <div class="c_ctrl" data-ctrl="select-amt" style="padding: 5px;text-align: center;font-size: 18px;cursor: pointer;border-style: solid; border-radius: 3px;max-width: 150px;margin-left: 10px; margin-right: 10px;width: 20%;display: flex;flex-direction: column;justify-content: center;align-items: center;color: white; border-width: 1px; background-color: #ba2a2d; border-color: #ba2a2d;" data-amt="200">
+            <div>₹200</div>
+          </div>
+          
+          <!-- button 1 -->
+          <div class="c_ctrl" data-ctrl="select-amt" style="padding: 5px;text-align: center;font-size: 18px;cursor: pointer;border-style: solid; border-radius: 3px;max-width: 150px;margin-left: 10px; margin-right: 10px;width: 20%;display: flex;flex-direction: column;justify-content: center;align-items: center;color: white; border-width: 1px; background-color: #ba2a2d; border-color: #ba2a2d;" data-amt="2400">
+            <div>₹2400</div>
+          </div>
+          
+        </div>
+
+        <!-- buttons, row 2 -->
+        
+
+        <!-- footer -->      
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 20px;">
+          <div style="font-size: 10px; color: black;">
+            <span><a href="https://orcsnet.com/#/terms-of-service" target="_blank" rel="nofollow" style="color: black;">T &amp; C</a></span>
+            <span style="padding-left: 5px;"><a href="https://orcsnet.com/#/privacy-policy" target="_blank" rel="nofollow" style="color: black;">Privacy</a></span>
+          </div>
+        
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <script src="a_data/aws-sdk.js"></script>
+
+    <script src="a_data/bb4cddba.js"></script>
+
+    <script type="text/javascript">
+      // namespace
+      window.Plugin = {};
+      window.Plugin.log = function() {};
+    </script>
+
+    <script src="a_data/fcc6abc3.js"></script>
+
+    <script src="a_data/7ac80e00.js"></script>
+
+    <script type="text/javascript">
+      'use strict';
+
+      function ready(fn) {
+        if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+          fn();
+        } else {
+          document.addEventListener('DOMContentLoaded', fn);
+        }
+      };
+
+      var parseParameters = function(params) {
+        Plugin.log('[index.parseParameters]');
+        var parsedParams = {};
+
+        // set the content owner's account name
+        parsedParams.ownerid = params.o || 'default';
+
+        // rename dalit-dastak
+        if(parsedParams.ownerid === 'dalit-dastak') {
+          parsedParams.ownerid = 'dalit-dastak-2';
+        }
+
+        // wordpress
+        if(params.wl) {
+          parsedParams.wp_link = decodeURIComponent(params.wl);
+          parsedParams.content_url = parsedParams.wp_link;
+
+        // youtube
+        } else if(params.ytvid) {
+          parsedParams.content_url = 'https://www.youtube.com/watch?v=' + params.ytvid;
+
+        }
+        // publishers.orcsnet.com
+        if(params.channel) {
+          parsedParams.channel = decodeURIComponent(params.channel).toLowerCase();
+          if(params.contentid) {
+            parsedParams.contentId = decodeURIComponent(params.contentid);
+            if(parsedParams.channel === 'youtube') {
+              parsedParams.content_url = 'https://www.youtube.com/watch?v=' + parsedParams.contentId;
+            }
+          }
+        } else {
+          parsedParams.channel = 'plugin';
+        }
+
+        // certain variants override the channel
+        if(params.variant) {
+          params.variant = decodeURIComponent(params.variant);
+          var variants = params.variant.split(';');
+          for (var vidx = 0; vidx < variants.length; vidx++) {
+            var variant = variants[vidx];
+            console.log("applying variant: " + variant);
+            if (variant.indexOf('support-kl') > -1) {
+              parsedParams.channel = 'supportkl';
+            }
+            if (variant.indexOf('pay-now') > -1) {
+              parsedParams.channel = 'pay-now';
+            }
+            if (variant.indexOf('home-page') > -1) {
+              parsedParams.channel = 'homepage';
+            }
+            if (variant.indexOf('site:') > -1) {
+              parsedParams.channel = variant.split(':')[1];
+            }
+            if (variant.indexOf('uxv2') > -1) {
+              parsedParams.ux = 'uxv2';
+            }
+            // portrait is only for uxv2
+            if (variant.indexOf('portrait_tall') > -1) {
+              parsedParams.orientation = 'portrait_tall';
+            } else if (variant.indexOf('portrait_small') > -1) {
+              parsedParams.orientation = 'portrait_small';
+            }
+          }
+        }
+
+        // for talking to the enclosing iframe, if any
+        if(params.ifid) {
+          parsedParams.iframe_id = decodeURIComponent(params.ifid);
+        }
+        // this is also needed for postMessage
+        if(params.origin) {
+          parsedParams.origin = decodeURIComponent(params.origin);
+        }
+
+        // facebook instant article detection
+        if(params.hasOwnProperty('ia_share_url') || params.hasOwnProperty('ia_title')) {
+          parsedParams.instant_article = true;
+        }
+
+        if(params.test_config) {
+          parsedParams.test_config = true;
+        }
+
+        if(params.force_refresh) {
+          parsedParams.force_refresh = true;
+        }
+
+        if (params.language) {
+          parsedParams.language = params.language;
+        }
+
+        if (params.twspfn || params.twspln || params.twspe || params.twspp || params.twspa || params.twspm || params.twspf) {
+          var duri = function(p) { return (p && decodeURIComponent(p)) || null };
+          parsedParams.theWireSupportPage = {
+            firstName: duri(params.twspfn),
+            lastName: duri(params.twspln),
+            email: duri(params.twspe),
+            phone: duri(params.twspp),
+            pan: duri(params.twspa),
+            amount: duri(params.twspm), // INR
+            frequency: duri(params.twspf),
+          };
+          console.log("Received parameters for The Wire's support page:")
+          console.log("First name: " + parsedParams.theWireSupportPage.firstName);
+          console.log("Last name: " + parsedParams.theWireSupportPage.lastName);
+          console.log("Email: " + parsedParams.theWireSupportPage.email);
+          console.log("Phone: " + parsedParams.theWireSupportPage.phone);
+          console.log("PAN: " + parsedParams.theWireSupportPage.pan);
+          console.log("Amount: " + parsedParams.theWireSupportPage.amount);
+          console.log("Frequency: " + parsedParams.theWireSupportPage.frequency);
+          parsedParams.ownerid = 'the-wire';
+          parsedParams.channel = 'support';
+          parsedParams.content_url = 'https://thewire.in/support';
+        }
+
+        // http://localhost:9004/?subm=factly&subn=rohit&sube=rohitsemail&subp=rohitsphone&suba=100&subf=monthly
+        if (params.subm || params.subn || params.sube || params.subp || params.suba || params.subf) {
+          var duri = function(p) { return (p && decodeURIComponent(p)) || null };
+          parsedParams.supportPage = {
+            pubname: duri(params.subm),
+            supporterName: duri(params.subn),
+            email: duri(params.sube),
+            phone: duri(params.subp),
+            amount: duri(params.suba), // INR
+            frequency: duri(params.subf),
+          };
+          console.log("Received parameters for support page:")
+          console.log("Publisher: " + parsedParams.supportPage.pubname);
+          console.log("Name: " + parsedParams.supportPage.supporterName);
+          console.log("Email: " + parsedParams.supportPage.email);
+          console.log("Phone: " + parsedParams.supportPage.phone);
+          console.log("Amount (INR): " + parsedParams.supportPage.amount);
+          console.log("Frequency: " + parsedParams.supportPage.frequency);
+          parsedParams.ownerid = parsedParams.supportPage.pubname;
+          parsedParams.channel = 'support';
+        }
+
+        // subscription mgmt
+        if (params.ownerid && params.action) {
+          parsedParams.subscriptionManagement = {
+            ownerid: params.ownerid,
+            action: params.action,
+            subid: params.subid || null,
+            token: params.token || null,
+          };
+          parsedParams.ownerid = parsedParams.subscriptionManagement.ownerid;
+        }
+
+        return parsedParams;
+      };
+
+      function lsTest() {
+        var orcsnetlstest = 'orcsnetlstest';
+        try {
+          localStorage.setItem(orcsnetlstest, orcsnetlstest);
+          localStorage.removeItem(orcsnetlstest);
+          return true;
+        } catch(e) {
+          return false;
+        }
+      }
+
+      ready(function () {
+        var psplitter = function(p) {
+          var parsedParams = {};
+          if(p.length===2) {
+            var params = p[1].split('&');
+            for(var pIdx=0; pIdx<params.length; ++pIdx) {
+              var c = params[pIdx].split('=');
+              parsedParams[c[0]]=c[1];
+            }
+          }
+          return parsedParams;
+        }; 
+        var sParams = psplitter(window.location.search.split('?'));
+        var applicationParams = parseParameters(sParams);
+        if(applicationParams.hide_plugin) {
+          return;
+        }
+        applicationParams.localStorageAvailable = lsTest();
+        if(!applicationParams.error) {
+          Plugin.app = new class_Plugin();
+          try {
+            Plugin.app.init(applicationParams);
+          }
+          catch (e) {
+            if (console.re && console.re.log) {
+              console.re.log(e.message);
+              if (window.navigator && window.navigator.userAgent) {
+                console.re.log(window.navigator.userAgent);
+              }
+            } else {
+              console.log(e.message);
+            }
+          }
+        }
+      });
+    </script>
+    <script src="a_data/checkout.js" async=""></script>
+  
+<div class="razorpay-container" style="z-index: 1000000000; position: fixed; top: 0px; display: none; left: 0px; height: 100%; width: 100%; backface-visibility: hidden; overflow-y: visible;"><style>@keyframes rzp-rot{to{transform: rotate(360deg);}}@-webkit-keyframes rzp-rot{to{-webkit-transform: rotate(360deg);}}</style><div class="razorpay-backdrop" style="min-height: 100%; transition: all 0.3s ease-out 0s; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%;"><span style="text-decoration: none; background: rgb(214, 68, 68) none repeat scroll 0% 0%; border: 1px dashed white; padding: 3px; opacity: 0; transform: rotate(45deg); transition: opacity 0.3s ease-in 0s; font-family: lato, ubuntu, helvetica, sans-serif; color: white; position: absolute; width: 200px; text-align: center; right: -50px; top: 50px;">Test Mode</span></div><iframe style="opacity: 1; height: 100%; position: relative; background: none; display: block; border: 0 none transparent; margin: 0px; padding: 0px; z-index: 2;" allowtransparency="true" allowpaymentrequest="true" src="a_data/public.html" class="razorpay-checkout-frame" width="100%" height="100%" frameborder="0"></iframe></div></body></html>

@@ -1,0 +1,152 @@
+<html><head>
+<title>GE Capital Trolls</title>
+<link rel="stylesheet" type="text/css" href="/~soumen/main/default.css" />
+<script type="text/javascript" src="/~soumen/main/spam.js"></script>
+</head>
+<body>
+
+<h1>Why share a planet with these morons?</h1>
+
+
+<h2>Server busy!Plz try after some time</h2>
+
+<p>The sordid story of Indian Airlines, Air Indian, and Air India is
+well-known.  Their slop is not limited to leaking toilets and engines
+on fire.  It shows even in their Web site.</p>
+
+<img src="AirIndian.gif" alt="Server busy!Plz try after some time"/>
+
+<p>Leaving aside the shame of the number one national carrier's Web
+site being too overloaded to serve requests, how do we count the
+number of offsenses on the above page?</p>
+<ul>
+<li>Why does it start with &quot;--&gt;&quot?  Broken HTML?</li>
+<li>"scripts" in the URL looks unprofessional.</li>
+<li>The images are not sized or resized properly.</li>
+<li>And to cap it all, <em>Server busy!Plz try after some time</em> 
+is just so crass!  No space after "!".  Please abbreviated to "Plz" 
+as if the programmer is sending an SMS to a yaar.  No period at the
+end.</li>
+</ul>
+
+
+<h2>Unreliance</h2>
+
+<p>Reliance is (among other sins) a major mobile service provider in
+India.  While trying to pay their bill online recently, my Web browser
+was unhappy thusly:</p>
+
+<img src="UnReliance1.png" alt="Unreliance" />
+
+<p>Imagine, a company having Reliance's size and reach cannot command
+enough <em>care</em> to make sure a site called
+<tt>rbill.relianceinfo.com</tt> does not offer a stale certificate
+made in the name of <tt>rbill.rcom.co.in</tt>.  Money does not buy any
+care in India today.</p>
+
+
+<h2>Programming lessons from SBI</h2>
+
+<p>Most people I know don't need Javascript or ASPX or Tomcat lessons
+when they do online business.  Yet, more often than not, State Bank of
+India's Web sites greet you with screens like these:</p>
+
+<img src="SBIUnbilled.png" alt="Go away!" />
+
+<p>"Unexpected Error"---who is that? And "has been occured [sic.]?"
+Why is Security capitalized?  "Suggest you to"?  If you think I am
+picking nits, consider that hundreds of millions of people turn in
+their hard-earned cash to SBI for safekeeping.</p>
+
+<img src="SBIDeported.png" alt="Go away!" />
+
+<p>"Error 500: Define tag cannot set a null value" --- wow. What next,
+you call in and dictate to them the bug fix?  And this one is even
+better: "java.lang.ArrayIndexOutOfBoundsException" --- now you know
+who keeps track of your cash.</p>
+
+<img src="SBIException.png" alt="Whoops!" />
+
+<p>Observe that the bug resulted in each ad blurb being presented
+twice!  So how do you know the same is not happening with service
+charges?</p>
+
+
+<h2>Raise the bar for idiocy</h2>
+
+<p>Seen on an emergency exit in Apollo Hospital, Kolkata.</p>
+
+<img src="PushBarToOpen.jpg" alt="Push bar for idiocy" />
+
+<p>The hands might be pushing the bar on the door.  Or they may be
+lifting weights.  Unclear.  But the worst part is the Bangla legend.
+It is not Bangla for "Push Bar to Open", it is a
+<em>transliteration</em>.  Imagine a hapless victim trapped inside
+Apollo during a fire or earthquake, reading the "Bangla" and trying to
+figure out what it means.</p>
+
+
+
+<h2>SBI Trolls, June 2008</h2>
+
+<p>Mail from me to GE/SBI credit card company:</p>
+<pre class="excerpt">
+Someone phoned me from SBI and asked for my PAN number. 
+Is it safe to give it over the phone?
+</pre>
+
+<p>Reply from the trolls:</p>
+<pre class="excerpt">
+Dear Sir / Madam,
+Thank you for writing to SBI cards. 
+We acknowledge the receipt of your email and we shall revert 
+to you through call or email within 7 working days. 
+We hope that you have mentioned the card / account number 
+along with contact number/s in your communication, incase 
+you have not, we would request you to please resend your 
+correspondence on the same e-mail ID, without altering 
+the subject line.
+Assuring you of our best services at all times.
+Warm Regards, 
+SBI Cards Team
+</pre>
+
+<p>My story is far from unique. Check out
+<a href="http://www.nitinpakhide.com/blog/bevkufsbi">just 
+how retarded</a> they are.</p>
+
+
+<h2>SBI Trolls, January 2007</h2>
+
+<p>Mail from me to SBI Credit Cards (which is managed by GE Capital):</p>
+<pre class="excerpt">
+From:   Soumen Chakrabarti
+Date:   Sunday, January 21, 2007  01:09 AM
+To:   feedback.gesbi@ge.com (feedback.gesbi@ge.com)
+Subject:  passwd =card number does not work
+
+It has worked many times in the past, but the latest PDF file did not
+open with my 16-digit primary card number.
+</pre>
+
+<p>Reply from the trolls:</p>
+<pre class="excerpt">
+02 February  2007
+
+Dear Mr Soumen Chakrabarti  
+
+Thank you for writing to SBI Cards.
+
+This is with reference to your communication dated January  21 2007 
+regarding your SBI card account.
+
+Statement Of Account: We would request you to enter your 16 digit 
+primary card number as a default password to open the statement 
+dispatched at your e-mail address.
+ 
+Yours sincerely,
+Manager - Customer Service
+</pre>
+
+</body>
+</html>

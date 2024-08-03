@@ -1,0 +1,72 @@
+/* Links and search */
+#header a.logo {
+	background: transparent url('/resource/images/header/logo.gif') no-repeat top left;
+	float: left;
+	margin: 0 0 4px;
+	border: 0 none;
+	height: 53px;
+	width: 115px;
+}
+
+#header-country {
+	float:left;
+	padding:4px;
+}
+
+#header-country img {
+	border: 1px solid #ccc;
+	vertical-align: middle;
+	width: 18px;
+	height: 11px;
+}
+
+#header-country span {
+	font-weight: bold;
+	color: #4FA600;
+}
+
+#header-country a {
+	font-size: 0.9em;
+	text-decoration: none;
+	color: #636469;
+}
+
+#header-right {
+	float: right;
+	margin-top: 4px;
+	text-align: right;
+	line-height: normal;
+}
+
+#header-right a {
+	margin-left: 6px;
+	border-left: 1px solid #ccc;
+	padding-left: 7px;
+	_height: 0;
+	text-decoration: none;
+}
+#header-right a:hover {
+	text-decoration: underline;
+	color: #369;
+}
+#header-right a.first {
+	margin: 0;
+	padding: 0;
+	border-left: none;
+}
+
+#header-right form {
+	margin-bottom:8px;
+	font-size: 8pt;
+}
+
+#header-right #profile {
+	border-top: 1px solid #ccc;
+	padding: 6px;
+	margin-top: 6px;
+}
+
+#header-cart {
+	background: transparent url('/resource/images/header/cart.gif') no-repeat right center;
+	padding-right: 24px;
+}
